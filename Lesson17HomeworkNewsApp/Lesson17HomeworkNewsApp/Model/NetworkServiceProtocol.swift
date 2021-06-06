@@ -12,7 +12,7 @@ typealias GetAPIResponse = Result<Get1Response, NetworkServiceError>
 
 protocol NetworkServiceProtocol {
     func getArticles(completion: @escaping (GetAPIResponse) -> Void)
-    func loadImage(urlToImage: String, completion: @escaping (Data?) -> Void)
+    func loadImage(with model: Get2ArticleDataResponse, completion: @escaping(Data?) -> Void)
 }
 
 

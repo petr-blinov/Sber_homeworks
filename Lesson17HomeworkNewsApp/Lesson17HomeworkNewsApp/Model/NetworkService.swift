@@ -77,11 +77,28 @@ extension NetworkService: NetworkServiceProtocol {
     }
     
     // MARK: - Загружаем картинку
-    func loadImage(urlToImage: String, completion: @escaping (Data?) -> Void) {
-        //
+    func loadImage(with model: Get2ArticleDataResponse, completion: @escaping (Data?) -> Void) {
+        
+        // request
+        if let imageUrl = model.urlToImage {
+            let imageUrlWithSize = imageUrl.replacingOccurrences(of: "{width}x{height}", with: "300x200")
+            let url = URL(string: imageUrlWithSize)
+            let request = URLRequest(url: url!, cachePolicy: .returnCacheDataElseLoad)
+            
+        // handler
+            let dataTask = session.dataTask(with: request) { (data, responce, error) in
+              do {
+                let data = try self.httpResponse(data: data, response: responce)
+                completion(data)
+              } catch {
+                completion(nil)
+              }
+            }.resume()
+        } else {
+            completion(nil); return}
     }
     
-    
+
 //  Добавляем проверку на то какой пришел статус код: если в диапазоне 200-300, то все ок; если вне этого диапазона, то ошибка.
     private func httpResponse(data: Data?, response: URLResponse?) throws -> Data {
         guard let httpResponse = response as? HTTPURLResponse,

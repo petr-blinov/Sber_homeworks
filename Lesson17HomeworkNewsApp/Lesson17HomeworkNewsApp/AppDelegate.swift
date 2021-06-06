@@ -16,12 +16,8 @@ var window: UIWindow?
         
         let service = NetworkService()
         
-        let navigationController = UINavigationController()
-        let rootViewController = ViewController(networkService: service)
-        navigationController.viewControllers = [rootViewController]
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = rootViewController
+        window?.rootViewController = UINavigationController(rootViewController: ViewController(networkService: service))
         window?.makeKeyAndVisible()
         return true
     }

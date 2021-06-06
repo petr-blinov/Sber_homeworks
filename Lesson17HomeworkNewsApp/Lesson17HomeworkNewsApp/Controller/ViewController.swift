@@ -42,6 +42,9 @@ final class ViewController: BaseViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        navigationItem.title = "American news"
+        navigationController?.navigationBar.prefersLargeTitles = true
         configureUI()
         loadData()
     }
@@ -126,5 +129,10 @@ extension ViewController: UITableViewDelegate {
             networkService.getArticles { self.processDataLoading($0) }
         }
     }
-
+    
+      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath,animated : true)
+        let articleContentViewController = ArticleContentViewController(networkService: networkService, model: dataSource[indexPath.row])
+        navigationController?.pushViewController(articleContentViewController, animated: true)
+      }
 }

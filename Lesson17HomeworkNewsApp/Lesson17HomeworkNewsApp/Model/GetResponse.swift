@@ -13,14 +13,14 @@ struct Get1Response: Decodable {
 }
 
 struct Get2ArticleDataResponse: Decodable {
-    let source: [Source]
-    let author: String
+    let source: Source
+    let author: String?
     let title: String
-    let description: String
+    let description: String?
     let url: String
-    let urlToImage: String
+    let urlToImage: String?
     let publishedAt: String
-    let content: String
+    let content: String?
 }
 
 struct Source: Decodable {

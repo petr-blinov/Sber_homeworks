@@ -19,6 +19,7 @@
 		F47034A5266A023B0090C973 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47034A4266A023B0090C973 /* BaseViewController.swift */; };
 		F47034A8266A2AA40090C973 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47034A7266A2AA40090C973 /* TableViewCell.swift */; };
 		F47034AB266A4C2E0090C973 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47034AA266A4C2E0090C973 /* NetworkService.swift */; };
+		F470350B266CFBD60090C973 /* ArticleContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470350A266CFBD50090C973 /* ArticleContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F47034A4266A023B0090C973 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F47034A7266A2AA40090C973 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F47034AA266A4C2E0090C973 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F470350A266CFBD50090C973 /* ArticleContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				F47034782668D8ED0090C973 /* ViewController.swift */,
+				F470350A266CFBD50090C973 /* ArticleContentViewController.swift */,
 				F47034A12669FDA40090C973 /* SpinnerViewController.swift */,
 				F47034A4266A023B0090C973 /* BaseViewController.swift */,
 			);
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F470350B266CFBD60090C973 /* ArticleContentViewController.swift in Sources */,
 				F47034AB266A4C2E0090C973 /* NetworkService.swift in Sources */,
 				F47034792668D8ED0090C973 /* ViewController.swift in Sources */,
 				F470349326691BF70090C973 /* NetworkServiceError.swift in Sources */,
