@@ -1,0 +1,16 @@
+//
+//  module.modulemap
+//  Lesson31_Interoperability
+//
+//  Created by Petr Blinov on 11.07.2021.
+//
+
+module ObjCLibModule {
+    header "../ObjCLib/Umbrella.h"
+    
+    explicit module ObjCSubLibModule {
+        header "../ObjCSubLib/SubUmbrella.h"
+        export *
+    }
+    export *
+}
